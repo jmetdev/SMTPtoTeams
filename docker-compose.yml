@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  smtp-to-webex:
+    build: .
+    ports:
+      - "1125:1125"
+    environment:
+      - WEBEX_TOKEN=${WEBEX_TOKEN}
+      - WEBEX_ROOM_ID=${WEBEX_ROOM_ID}
+    restart: unless-stopped 
