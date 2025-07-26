@@ -38,7 +38,7 @@ class SMTPWebexHandler:
 
 if __name__ == "__main__":
 	handler = SMTPWebexHandler()
-	controller = Controller(handler, hostname='0.0.0.0', port=5001)
+	controller = Controller(handler, hostname='0.0.0.0', port=1125)
 	controller.start()
 	try:
 		asyncio.get_event_loop().run_forever()
